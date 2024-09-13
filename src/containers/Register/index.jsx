@@ -6,14 +6,16 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import { api } from "../../services/api"
 import { toast } from 'react-toastify'
-import { Link } from "./styles"
+import { Link } from "../Login/styles"
 import { useNavigate } from "react-router-dom"
 
-export function Login() {
+export function Register() {
     const navigate = useNavigate()
     const schema = yup.object({
+        name: yup.string().required("Digite o seu nome "),
         email: yup.string().email("Digite um E-mail Válido").required("Digite um email"),
         password: yup.string().min(6, "A senha deve ter no minimo 6 caracteres").required("Digite Uma Senha"),
+        confirmPassword: yup.string().oneOf([yup.ref("password")], "As senhas devem ser iguais"),
     }).required()
     const {
         register,
@@ -23,24 +25,30 @@ export function Login() {
         resolver: yupResolver(schema),
     })
     const onSubmit = async (data) => {
-        const response = await toast.promise(
-            api.post("/session", {
+        try {
+            const { status } = await api.post("/users", {
+                name: data.name,
                 email: data.email,
                 password: data.password,
-            }),
-            {
-                pending: "Verificando Seus Dados",
-                success: {
-                    render() {
-                        setTimeout(() => {
-                            navigate("/")
-                        }, 2000);
-                        return "Seja Bem-Vindo(a)"
-                    }
+            },
+
+                {
+                    validateStatus: () => true,
                 },
-                error: "Email ou Senha incorretos",
+            )
+            if (status === 200 || status === 201) {
+                setTimeout(() => {
+                    navigate("/login")
+                }, 2000);
+                toast.success("Conta criada com sucesso")
+            } else if (status === 400 || status === 409) {
+                toast.error("Email já cadastrado, faça o login para continuar")
+            } else {
+                throw new Error("Erro inesperado")
             }
-        )
+        } catch (error) {
+            toast.error("Falha no sistema! tente novamente!")
+        }
     }
 
     return (
@@ -49,9 +57,13 @@ export function Login() {
                 <img src={Logo} alt="Logo-DevBurguer" />
             </LeftContainer>
             <RightContainer>
-                <Title>Olá, seja bem vindo ao <span>New Burguer!</span><br />
-                    Acesse com seu <span>Login e senha.</span></Title>
+                <Title>Criar Conta</Title>
                 <Form onSubmit={handleSubmit(onSubmit)}>
+                    <InputContainer>
+                        <label>Nome :</label>
+                        <input type="text" {...register("name")} />
+                        <p>{errors?.name?.message}</p>
+                    </InputContainer>
                     <InputContainer>
                         <label>Email :</label>
                         <input type="email" {...register("email")} />
@@ -62,9 +74,14 @@ export function Login() {
                         <input type="password" {...register("password")} />
                         <p>{errors?.password?.message}</p>
                     </InputContainer>
-                    <Button type="submit">Entrar</Button>
+                    <InputContainer>
+                        <label>Confirmar senha :</label>
+                        <input type="password" {...register("confirmPassword")} />
+                        <p>{errors?.confirmPassword?.message}</p>
+                    </InputContainer>
+                    <Button type="submit">Criar conta</Button>
                 </Form>
-                <p>Não possui conta? <Link to={"/cadastro"}>Clique aqui.</Link></p>
+                <p>Já possui conta? <Link to={"/login"}>Clique aqui.</Link></p>
             </RightContainer>
         </Container>
     )
