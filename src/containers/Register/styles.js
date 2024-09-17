@@ -26,7 +26,7 @@ export const LeftContainer = styled.div`
 `
 export const RightContainer = styled.div`
     background: url('${ImgRightContainer}');
-    background-color: #FF441F;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
