@@ -1,4 +1,3 @@
-import { Container, Form, InputContainer, LeftContainer, RightContainer, Title } from "./styles"
 import Logo from "../../assets/logo-burguer.png"
 import { Button } from "../../components/Button"
 import { useForm } from "react-hook-form"
@@ -6,7 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import { api } from "../../services/api"
 import { toast } from 'react-toastify'
-import { Link } from "./styles"
+import { InputContainer, Link, RightContainer, Title, Form, MainDiv, Header } from "./styles"
 import { useNavigate } from "react-router-dom"
 
 export function Login() {
@@ -44,29 +43,32 @@ export function Login() {
         localStorage.setItem("token", token)
     }
 
+
     return (
-        <Container>
-            <LeftContainer>
-                <img src={Logo} alt="Logo-DevBurguer" />
-            </LeftContainer>
-            <RightContainer>
-                <Title>Olá, seja bem vindo ao <span>New Burguer!</span><br />
-                    Acesse com seu <span>Login e senha.</span></Title>
+
+        <RightContainer>
+            <MainDiv>
+                <Header>
+                    <img src={Logo} alt="Logo-DevBurguer" />
+                </Header>
                 <Form onSubmit={handleSubmit(onSubmit)}>
+                    <h1>LOGIN</h1>
                     <InputContainer>
-                        <label>Email :</label>
-                        <input type="email" {...register("email")} />
+                        <label>Email</label>
+                        <input type="email" {...register("email")} placeholder="Email" />
                         <p>{errors?.email?.message}</p>
                     </InputContainer>
                     <InputContainer>
-                        <label>Senha :</label>
-                        <input type="password" {...register("password")} />
+                        <label>Senha</label>
+                        <input type="password" {...register("password")} placeholder="Senha" />
                         <p>{errors?.password?.message}</p>
                     </InputContainer>
                     <Button type="submit">Entrar</Button>
+                    <p>Não possui conta? <Link to={"/cadastro"}>Clique aqui.</Link></p>
                 </Form>
-                <p>Não possui conta? <Link to={"/cadastro"}>Clique aqui.</Link></p>
-            </RightContainer>
-        </Container>
+
+            </MainDiv>
+        </RightContainer>
+
     )
 }

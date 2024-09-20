@@ -1,9 +1,9 @@
-import { Banner, Container, Content } from "./styles"
+import { Banner, Container, Content, Main } from "./styles"
 import { CategoriesCarousel } from "../../components/CategoriesCarousel"
 
 export function Home() {
     return (
-        <main>
+        <Main>
             <Banner>
                 <h1>Seja Bem-Vindo(a)</h1>
             </Banner>
@@ -15,7 +15,7 @@ export function Home() {
                 </Content>
             </Container>
 
-        </main>
+        </Main>
     )
 }
 

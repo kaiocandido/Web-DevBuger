@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { api } from "../../services/api"
 import { useState } from "react"
-import { Carousel } from 'react-multi-carousel';
+import Carousel from "react-multi-carousel"
 import { Container, Title, ContainerItems } from "./styles"
 import "react-multi-carousel/lib/styles.css"
 
