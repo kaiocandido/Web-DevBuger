@@ -1,4 +1,4 @@
-import { Container, Form, InputContainer, LeftContainer, RightContainer, Title } from "./styles"
+import { InputContainer, Link, RightContainer, Title, Form, MainDiv, Header } from "./styles"
 import Logo from "../../assets/logo-burguer.png"
 import { Button } from "../../components/Button"
 import { useForm } from "react-hook-form"
@@ -6,7 +6,6 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import { api } from "../../services/api"
 import { toast } from 'react-toastify'
-import { Link } from "../Login/styles"
 import { useNavigate } from "react-router-dom"
 
 export function Register() {
@@ -52,37 +51,33 @@ export function Register() {
     }
 
     return (
-        <Container>
-            <LeftContainer>
-                <img src={Logo} alt="Logo-DevBurguer" />
-            </LeftContainer>
-            <RightContainer>
-                <Title>Criar Conta</Title>
+        <RightContainer>
+            <MainDiv>
+                <Header>
+                    <img src={Logo} alt="Logo-DevBurguer" />
+                </Header>
                 <Form onSubmit={handleSubmit(onSubmit)}>
+                    <h1>LOGIN</h1>
                     <InputContainer>
-                        <label>Nome :</label>
-                        <input type="text" {...register("name")} />
-                        <p>{errors?.name?.message}</p>
-                    </InputContainer>
-                    <InputContainer>
-                        <label>Email :</label>
-                        <input type="email" {...register("email")} />
+                        <label>Email</label>
+                        <input type="email" {...register("email")} placeholder="Email" />
                         <p>{errors?.email?.message}</p>
                     </InputContainer>
                     <InputContainer>
-                        <label>Senha :</label>
-                        <input type="password" {...register("password")} />
+                        <label>Senha</label>
+                        <input type="password" {...register("password")} placeholder="Senha" />
                         <p>{errors?.password?.message}</p>
                     </InputContainer>
                     <InputContainer>
-                        <label>Confirmar senha :</label>
-                        <input type="password" {...register("confirmPassword")} />
+                        <label>Confirmar senha</label>
+                        <input type="password" {...register("confirmPassword")} placeholder="Confirmar Senha"/>
                         <p>{errors?.confirmPassword?.message}</p>
                     </InputContainer>
-                    <Button type="submit">Criar conta</Button>
+                    <Button type="submit">Entrar</Button>
+                    <p>Já possui conta? <Link to={"/login"}>Clique aqui.</Link></p>
                 </Form>
-                <p>Já possui conta? <Link to={"/login"}>Clique aqui.</Link></p>
-            </RightContainer>
-        </Container>
+
+            </MainDiv>
+        </RightContainer>
     )
 }

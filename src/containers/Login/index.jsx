@@ -45,7 +45,6 @@ export function Login() {
 
 
     return (
-
         <RightContainer>
             <MainDiv>
                 <Header>
@@ -69,6 +68,5 @@ export function Login() {
 
             </MainDiv>
         </RightContainer>
-
     )
 }
