@@ -4,12 +4,11 @@ export const Container = styled.div`
     .carousel-item{
         padding-right: 40px;
     }
-    padding-right: 40px;
-    padding-left: 40px;
+    cursor: grab;
 `
 export const Title = styled.h2`
     font-size: 32px;
-    color: #FF441F;
+    color: #ffffff;
     text-align: center;
     position: relative;
     padding-bottom: 12px;
