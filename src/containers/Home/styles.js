@@ -1,34 +1,47 @@
-import styled from "styled-components"
-import BackgroundImg from "../../assets/background.svg"
-import BackgroundSection from "../../assets/Padrao.png"
+import styled from "styled-components";
+import BackgroundImg from "../../assets/view-delicious-fantasy-surreal-street-food.jpg";
 
 export const Main = styled.main`
-background-color: black;
-    height: 100%;
-    width: 100%;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* Para evitar overflow em dispositivos pequenos */
 `
-
 export const Banner = styled.div`
     background: url('${BackgroundImg}');
+    text-align: center;
     background-size: cover;
     background-position: center;
     height: 300px;
-
-    h1{
-        font-size: 80px;
+    border-radius: 10px;
+    position: relative; /* Para o posicionamento do h1 */
+    h1 {
+        font-size: 4vw; /* Usando viewport width para responsividade */
         font-weight: 800;
-        color: white;
+        color: #FF441F;
         position: absolute;
-        right: 20%;
-        top: 10%;
+        right: 6%;
+        top: 8%;
+        @media (max-width: 768px) {
+            font-size: 6vw; /* Ajusta o tamanho da fonte em telas menores */
+            right: 5%; /* Ajusta a posição do h1 */
+            top: 10%; /* Ajusta a posição do h1 */
+        }
     }
 `
 export const Container = styled.section`
-    //background: url('${BackgroundSection}');
-    background-color: black;
+    background: black;
+    background-size: cover;
+    background-position: center;
     height: 64vh;
-    background-color: black;
+    padding: 20px; /* Adiciona padding para melhor espaçamento */
+    @media (max-width: 768px) {
+        height: auto; /* Permite altura automática em telas menores */
+    }
 `
 export const Content = styled.div`
-
+    padding-bottom: 70px;
+    @media (max-width: 768px) {
+        padding-bottom: 30px; /* Ajusta o padding em telas menores */
+    }
 `

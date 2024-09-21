@@ -1,17 +1,17 @@
 import { Banner, Container, Content, Main } from "./styles"
 import { CategoriesCarousel } from "../../components/CategoriesCarousel"
+import { OffersCarousel } from "../../components/OffersCarousel"
 
 export function Home() {
     return (
         <Main>
             <Banner>
-                <h1>Seja Bem-Vindo(a)</h1>
             </Banner>
 
             <Container>
                 <Content>
                     <CategoriesCarousel />
-                    <div>Produtos</div>
+                    <OffersCarousel />
                 </Content>
             </Container>
 

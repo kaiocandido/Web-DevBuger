@@ -13,7 +13,6 @@ export const ContainerButton = styled.button`
     color: black;
     background: #FF441F;
     box-shadow: 0px 10px 40px -12px #FF441F;
-    
     &:hover{
         cursor: pointer;
     }

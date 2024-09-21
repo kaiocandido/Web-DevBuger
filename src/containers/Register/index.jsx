@@ -59,6 +59,11 @@ export function Register() {
                 <Form onSubmit={handleSubmit(onSubmit)}>
                     <h1>LOGIN</h1>
                     <InputContainer>
+                        <label>Nome</label>
+                        <input type="text" {...register("name")} placeholder="Nome" />
+                        <p>{errors?.name?.message}</p>
+                    </InputContainer>
+                    <InputContainer>
                         <label>Email</label>
                         <input type="email" {...register("email")} placeholder="Email" />
                         <p>{errors?.email?.message}</p>
@@ -70,10 +75,10 @@ export function Register() {
                     </InputContainer>
                     <InputContainer>
                         <label>Confirmar senha</label>
-                        <input type="password" {...register("confirmPassword")} placeholder="Confirmar Senha"/>
+                        <input type="password" {...register("confirmPassword")} placeholder="Confirmar Senha" />
                         <p>{errors?.confirmPassword?.message}</p>
                     </InputContainer>
-                    <Button type="submit">Entrar</Button>
+                    <Button type="submit">Cadastrar</Button>
                     <p>Já possui conta? <Link to={"/login"}>Clique aqui.</Link></p>
                 </Form>
 
