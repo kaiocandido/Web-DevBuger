@@ -5,13 +5,18 @@ import Carousel from "react-multi-carousel"
 import { Container, Title } from "./styles"
 import "react-multi-carousel/lib/styles.css"
 import { CardProduct } from "../CardProduct"
+import { FormatPrice } from "../../Utils/FormatPrice"
 
 export function OffersCarousel() {
     const [offers, setOffers] = useState([])
     useEffect(() => {
         async function loadProducts() {
             const { data } = await api.get('/products')
-            const onlyOffers = data.filter(product => product.offer)
+            const onlyOffers = data.filter(product => product.offer).map(product => ({
+                currencyValeu: FormatPrice(product.price),
+                ...product,
+            })
+            )
             setOffers(onlyOffers)
         }
 
