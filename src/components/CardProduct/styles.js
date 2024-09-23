@@ -13,7 +13,6 @@ export const Container = styled.div`
     width: 80%;
     height: 120px;
     position: relative;
-    
     div{
         width: 100%;
         height: 60px;
@@ -39,5 +38,4 @@ export const CardImg = styled.img`
     height: 100px;
     position: absolute;
     top: -55px;
-    
 `

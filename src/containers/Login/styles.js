@@ -73,7 +73,6 @@ export const Form = styled.form`
     background: #2f2841;
     border-radius: 20px;
     box-shadow: 0px 10px 40px #00000056;
-
     @media (max-width: 768px) {
         padding: 20px; /* Reduz o padding em telas menores */
     }

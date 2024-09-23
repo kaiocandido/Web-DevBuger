@@ -64,7 +64,6 @@ export function Menu() {
                     ESTA AQUI
                     <span>Esse cardapio está irresistível!</span>
                 </h1>
-
             </Banner>
             <CategoriesMenu>
                 {categories.map(category => (

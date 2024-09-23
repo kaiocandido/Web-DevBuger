@@ -19,7 +19,6 @@ export const Banner = styled.div`
     background-size: cover;
     width: 100%;
     position: relative;
-
     h1{
         font-family: "Road Rage", sans-serif;
         font-size: 80px;
@@ -42,7 +41,6 @@ export const CategoriesMenu = styled.div`
     gap: 50px;
     margin-top: 30px;
 `
-
 export const ProductsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -55,7 +53,6 @@ export const ProductsContainer = styled.div`
 export const CategoryButton = styled(Link)`
     text-decoration: none;
     cursor: pointer;
-
     background: none;
     color: ${(props) => props.$isActiveCategory ? 'white' : '#FF441F'};
     font-size: 24px;
@@ -64,7 +61,4 @@ export const CategoryButton = styled(Link)`
     line-height: 20px;
     border: none;
     border-bottom: ${(props) => props.$isActiveCategory && '2px solid white'};
-
-    
-
 `

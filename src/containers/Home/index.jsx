@@ -8,14 +8,12 @@ export function Home() {
             <Banner>
                 <h1>SEJA BEM-VINDO(A)!!</h1>
             </Banner>
-
             <Container>
                 <Content>
                     <CategoriesCarousel />
                     <OffersCarousel />
                 </Content>
             </Container>
-
         </Main>
     )
 }

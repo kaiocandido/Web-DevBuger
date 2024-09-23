@@ -34,7 +34,6 @@ export const RightContainer = styled.div`
         padding: 20px; /* Adiciona um espaçamento nas laterais */
     }
 `
-
 export const Title = styled.h2`
     font-size: 3rem; /* Usando rem para ser mais responsivo */
     justify-content: center;

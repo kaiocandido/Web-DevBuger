@@ -46,7 +46,6 @@ export const CategoryButton = styled(Link)`
         margin-top: 50px;
         font-weight: 500;
         text-decoration: none;
-
         &:hover{
             background-color: #FF441F;
             color: black;

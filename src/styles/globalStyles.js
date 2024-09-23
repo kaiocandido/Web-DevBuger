@@ -9,11 +9,8 @@ const globalStyles = createGlobalStyle`
         outline: none;
         overflow: hidden; /* Remove as barras de rolagem */
     }
-
-
     button{
         cursor: pointer;
     }
 `
-
 export default globalStyles

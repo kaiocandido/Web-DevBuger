@@ -81,7 +81,6 @@ export function Register() {
                     <Button type="submit">Cadastrar</Button>
                     <p>Já possui conta? <Link to={"/login"}>Clique aqui.</Link></p>
                 </Form>
-
             </MainDiv>
         </RightContainer>
     )

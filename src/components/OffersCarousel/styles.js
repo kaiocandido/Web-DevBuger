@@ -7,13 +7,10 @@ export const Container = styled.div`
     padding-right: 40px;
     padding-left: 40px;
     overflow-x: hidden;
-    
-
     .react-multi-carousel-list{
         overflow: visible;
     }
 `
-
 export const Title = styled.h2`
     font-size: 32px;
     color: #ffffff;

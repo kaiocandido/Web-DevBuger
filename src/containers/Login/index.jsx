@@ -43,7 +43,6 @@ export function Login() {
         localStorage.setItem("token", token)
     }
 
-
     return (
         <RightContainer>
             <MainDiv>
@@ -65,7 +64,6 @@ export function Login() {
                     <Button type="submit">Entrar</Button>
                     <p>Não possui conta? <Link to={"/cadastro"}>Clique aqui.</Link></p>
                 </Form>
-
             </MainDiv>
         </RightContainer>
     )
