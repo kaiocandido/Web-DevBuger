@@ -16,11 +16,12 @@ export const Banner = styled.div`
     border-radius: 10px;
     position: relative; /* Para o posicionamento do h1 */
     h1 {
-        font-size: 4vw; /* Usando viewport width para responsividade */
-        font-weight: 800;
-        color: #FF441F;
+        font-family: "Road Rage", sans-serif;
+        font-size: 5vw; /* Usando viewport width para responsividade */
+        font-weight: bold;
+        color: white;
         position: absolute;
-        right: 6%;
+        right: 20%;
         top: 8%;
         @media (max-width: 768px) {
             font-size: 6vw; /* Ajusta o tamanho da fonte em telas menores */

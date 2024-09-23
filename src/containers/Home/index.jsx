@@ -6,6 +6,7 @@ export function Home() {
     return (
         <Main>
             <Banner>
+                <h1>SEJA BEM-VINDO(A)!!</h1>
             </Banner>
 
             <Container>
