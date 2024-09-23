@@ -57,7 +57,7 @@ export function Register() {
                     <img src={Logo} alt="Logo-DevBurguer" />
                 </Header>
                 <Form onSubmit={handleSubmit(onSubmit)}>
-                    <h1>LOGIN</h1>
+                    <h1>CADASTRO</h1>
                     <InputContainer>
                         <label>Nome</label>
                         <input type="text" {...register("name")} placeholder="Nome" />
