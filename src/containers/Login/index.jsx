@@ -7,9 +7,12 @@ import { api } from "../../services/api"
 import { toast } from 'react-toastify'
 import { InputContainer, Link, RightContainer, Title, Form, MainDiv, Header } from "./styles"
 import { useNavigate } from "react-router-dom"
+import { useUser } from "../../hooks/UserContext"
 
 export function Login() {
     const navigate = useNavigate()
+    const { putUserData } = useUser()
+
     const schema = yup.object({
         email: yup.string().email("Digite um E-mail Válido").required("Digite um email"),
         password: yup.string().min(6, "A senha deve ter no minimo 6 caracteres").required("Digite Uma Senha"),
@@ -22,7 +25,7 @@ export function Login() {
         resolver: yupResolver(schema),
     })
     const onSubmit = async (data) => {
-        const { data: { token } } = await toast.promise(
+        const { data: userData } = await toast.promise(
             api.post("/session", {
                 email: data.email,
                 password: data.password,
@@ -40,7 +43,7 @@ export function Login() {
                 error: "Email ou Senha incorretos",
             }
         )
-        localStorage.setItem("token", token)
+        putUserData(userData)
     }
 
     return (
