@@ -28,43 +28,43 @@ export const RightContainer = styled.div`
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    overflow: hidden; /* Remove as barras de rolagem */
+    overflow: hidden; 
     @media (max-width: 768px) {
-        height: auto; /* Permite que o conteúdo se ajuste ao tamanho da tela */
-        padding: 20px; /* Adiciona um espaçamento nas laterais */
+        height: auto; 
+        padding: 20px; 
     }
 `
 export const Title = styled.h2`
-    font-size: 3rem; /* Usando rem para ser mais responsivo */
+    font-size: 3rem; 
     justify-content: center;
     color: #FF441F;
     font-weight: 1000;
     @media (max-width: 768px) {
-        font-size: 2rem; /* Reduz o tamanho da fonte em telas menores */
+        font-size: 2rem; 
     }
 `
 export const MainDiv = styled.div`
     width: 50vh;
-    height: auto; /* Ajusta a altura para ser dinâmica */
+    height: auto; 
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
     flex-direction: column;
     @media (max-width: 768px) {
-        width: 90%; /* Aumenta a largura em telas menores */
-        margin-bottom: 50px; /* Reduz a margem inferior */
+        width: 90%; 
+        margin-bottom: 50px; 
     }
 `
 export const Header = styled.header`
     img {
-        height: auto; /* Permite que a imagem se redimensione */
-        max-height: 300px; /* Limita a altura máxima */
-        width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+        height: auto; 
+        max-height: 300px;
+        width: 100%; 
     }
 `
 export const Form = styled.form`
-    width: 90%; /* Ajusta a largura para ocupar mais espaço em telas menores */
+    width: 90%; 
     justify-content: center;
     flex-direction: column;
     padding: 30px 35px;
@@ -72,7 +72,7 @@ export const Form = styled.form`
     border-radius: 20px;
     box-shadow: 0px 10px 40px #00000056;
     @media (max-width: 768px) {
-        padding: 20px; /* Reduz o padding em telas menores */
+        padding: 20px; 
     }
     p {
         color: white;
