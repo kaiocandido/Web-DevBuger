@@ -1,7 +1,8 @@
 import imageAbout from "../../assets/pexels-paul-voie-2523376.jpg"
 import imageAboutTwo from "../../assets/pexels-allanfranca-3465604.jpg"
 import imageAboutThree from "../../assets/pexels-fotios-photos-1024359.jpg"
-import { Container, ContainerImg, ContainerMedium, ContainerAbout, ContainerAboutTwo, ContainerAboutThree, ContainerAboutText } from "./styles"
+import imageAboutFour from "../../assets/hamburger-4955630_1920.png"
+import { Container, ContainerImg, ContainerMedium, ContainerAbout, ContainerAboutTwo, ContainerAboutThree, ContainerAboutText, ContainerMap } from "./styles"
 import MapEmbed from "../../components/Maps"
 
 export function About() {
@@ -14,7 +15,8 @@ export function About() {
                 <ContainerImg>
                     <img src={imageAbout} />
                     <img src={imageAboutTwo} />
-                    <MapEmbed />
+                    <img src={imageAboutThree} />
+                    <img src={imageAboutFour} />
                 </ContainerImg>
                 <ContainerAboutText>
                     <ContainerAbout>
@@ -31,6 +33,10 @@ export function About() {
                         <p>Se você é um amante de hambúrgueres ou está apenas em busca de uma refeição deliciosa, convidamos você a visitar a News Burguer. Venha experimentar nossos clássicos, além das criações exclusivas que só encontramos aqui!</p>
                     </ContainerAboutThree>
                 </ContainerAboutText>
+                <ContainerMap>
+                    <h1>Nossa Localização</h1>
+                    <MapEmbed />
+                </ContainerMap>
             </ContainerMedium>
 
         </Container>

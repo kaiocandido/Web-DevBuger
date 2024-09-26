@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     background-color: black;
-    width: 100vw;
+    width: 99vw;
     height: 45px;
     font-family: "Poppins", sans-serif;
 `

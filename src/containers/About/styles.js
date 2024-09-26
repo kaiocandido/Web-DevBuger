@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
     background-color: black;
 `
 export const ContainerMedium = styled.div`
     div{
         h1{
+            margin-top: 50px;
             font-family: "Road Rage", sans-serif;
             display: flex;
             justify-content: center;
@@ -19,13 +19,12 @@ export const ContainerMedium = styled.div`
     }
 `
 export const ContainerImg = styled.div`
-    display: flex;
+    display: grid;
+    grid-template-columns: 500px 500px;
     justify-content: center;  
+    gap: 50px;
     align-items: center;
     margin-top: 140px;
-    margin-left: 100px;
-    column-gap: 200px;
-
     img {
         height: 500px;
         width: 500px;
@@ -36,15 +35,14 @@ export const ContainerImg = styled.div`
 export const ContainerAbout = styled.div`
     margin-top: 30px;
     text-align: center;
-    padding: 20px; /* Espaçamento interno */
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 15px gray; /* Sombra para destaque */
-    width: 24%; /* Largura do quadrado */
-    max-width: 600px; /* Largura máxima */
-    margin-left: 160px; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
-
+    padding: 20px; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px gray; 
+    width: 24%; 
+    max-width: 600px; 
+    margin-left: auto;
+    margin-right: auto; 
     p {
         color: #4A6E2A;
         font-size: 13px;
@@ -54,15 +52,14 @@ export const ContainerAbout = styled.div`
 export const ContainerAboutTwo = styled.div`
     margin-top: 30px;
     text-align: center;
-    padding: 20px; /* Espaçamento interno */
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 15px gray; /* Sombra para destaque */
-    width: 24%; /* Largura do quadrado */
-    max-width: 600px; /* Largura máxima */
-    margin-left: 120px; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
-
+    padding: 20px; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px gray; 
+    width: 24%; 
+    max-width: 600px; 
+    margin-left: auto;
+    margin-right: auto; 
     p {
         color: #4A6E2A;
         font-size: 13px;
@@ -72,24 +69,30 @@ export const ContainerAboutTwo = styled.div`
 export const ContainerAboutThree = styled.div`
     margin-top: 30px;
     text-align: center;
-    padding: 20px; /* Espaçamento interno */
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 15px gray; /* Sombra para destaque */
-    width: 24%; /* Largura do quadrado */
-    max-width: 600px; /* Largura máxima */
-    margin-left: 120px; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
-
+    padding: 20px; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px gray; 
+    width: 24%; 
+    max-width: 600px; 
+    margin-left: auto;
+    margin-right: auto;   
     p {
         color: #4A6E2A;
         font-size: 13px;
         font-weight: 500;
     }
+    
 `
-
 export const ContainerAboutText = styled.div`
     display: flex;
     column-gap: 20px;
     font-family: "Poppins", sans-serif;
+    margin-top: 100px;
+`
+export const ContainerMap = styled.div`
+    margin-top: 200px;
+    h1{
+        margin-bottom: 50px;
+    }
 `
