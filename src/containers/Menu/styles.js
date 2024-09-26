@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import HamburguerBanner from "../../assets/pexels-valeria-boltneva-1639562 1.svg"
 import { Link } from "react-router-dom";
+import { keyframes } from 'styled-components';
 
 export const Container = styled.div`
     width: 100%;
@@ -27,6 +28,7 @@ export const Banner = styled.div`
         position: absolute;
         right: 20%;
         top: 30%;
+        text-shadow: 2px 2px 0px #4A6E2A;
     }
     span{
         font-family: 'Courier New', Courier, monospace;
@@ -47,18 +49,33 @@ export const ProductsContainer = styled.div`
     padding: 40px;
     justify-content: center;
     max-width: 1280px;
-    gap: 60px;
+    gap: 100px;
     margin: 50px auto;
 `
+const pulse = keyframes`
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+`
 export const CategoryButton = styled(Link)`
+    animation: ${pulse} 5s infinite;
+    font-family: "Poppins", sans-serif;
     text-decoration: none;
     cursor: pointer;
     background: none;
-    color: ${(props) => props.$isActiveCategory ? 'white' : '#FF441F'};
+    margin-bottom: 50px;
+    color: ${(props) => props.$isActiveCategory ? 'grey' : 'white'};
+    text-shadow: 2px 2px 0px #4A6E2A;
     font-size: 24px;
     font-weight: bold;
     padding-bottom: 5px;
     line-height: 20px;
     border: none;
     border-bottom: ${(props) => props.$isActiveCategory && '2px solid white'};
+    
 `

@@ -17,8 +17,28 @@ Dynamic Height:
 I changed the MainDiv height to auto, allowing content to automatically adjust height, which is especially important on mobile devices.
 These changes will help the layout better adjust to different screen sizes, improving the user experience. If you need more details or have other parts of the code to review, just let me know!
 */
+/*
+Relative Units:
+
+I changed some px values ​​to rem, especially in font-size, so that the fonts are more responsive.
+Media Queries:
+
+I added @media (max-width: 768px) to adjust styles when the screen is smaller than 768 pixels. This includes:
+Adjust the height of the RightContainer and add padding.
+Reduce font size in Title.
+Change the width of MainDiv and Form to 90%, ensuring they take up more space on smaller screens.
+Reduce Form padding.
+Images:
+
+In the Header component, I set the image height to auto and the width to 100% so that the image is responsive.
+Dynamic Height:
+
+I changed the MainDiv height to auto, allowing content to automatically adjust height, which is especially important on mobile devices.
+These changes will help the layout better adjust to different screen sizes, improving the user experience. If you need more details or have other parts of the code to review, just let me know!
+*/
 import styled from "styled-components";
 import { Link as ReactLink } from "react-router-dom";
+import { keyframes } from 'styled-components';
 
 export const RightContainer = styled.div`
     background-color: black;
@@ -31,7 +51,7 @@ export const RightContainer = styled.div`
     overflow: hidden; 
     @media (max-width: 768px) {
         height: auto; 
-        padding: 20px; 
+        padding: 20px;
     }
 `
 export const Title = styled.h2`
@@ -39,6 +59,7 @@ export const Title = styled.h2`
     justify-content: center;
     color: #FF441F;
     font-weight: 1000;
+
     @media (max-width: 768px) {
         font-size: 2rem; 
     }
@@ -51,41 +72,60 @@ export const MainDiv = styled.div`
     align-items: center;
     margin-bottom: 100px;
     flex-direction: column;
+
     @media (max-width: 768px) {
         width: 90%; 
         margin-bottom: 50px; 
     }
 `
+const pulse = keyframes`
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+`
 export const Header = styled.header`
-    img {
-        height: auto; 
-        max-height: 300px;
-        width: 100%; 
-    }
+        h1{
+            font-weight: bold;
+            text-shadow: 2px 2px 0px #4A6E2A; 
+            font-size: 100px; 
+            color: #fff;
+            margin-top: 30px;
+            font-family: "Road Rage", sans-serif;
+            animation: ${pulse} 1.5s infinite;
+        }
 `
 export const Form = styled.form`
     width: 90%; 
     justify-content: center;
     flex-direction: column;
     padding: 30px 35px;
-    background: #2f2841;
+    background: #4A6E2A;
     border-radius: 20px;
-    box-shadow: 0px 10px 40px #00000056;
+    box-shadow: 0px 5px 10px grey;
+    margin-top: 40px;
     @media (max-width: 768px) {
         padding: 20px; 
     }
     p {
+        margin-top: 30px;
         color: white;
         font-size: 18px;
         text-align: center;
         a {
-            color: #FF441F;
+            color: black;
             text-decoration: underline;
             cursor: pointer;
         }
     }
     h1 {
-        color: #FF441F;
+        font-family: "Road Rage", sans-serif;
+        font-size: 50px;
+        color: #fff;
         font-weight: 800;
         margin: 0;
         text-align: center;
@@ -103,26 +143,31 @@ export const InputContainer = styled.div`
         border: none;
         border-radius: 10px;
         padding: 15px;
-        background: #514869;
-        color: #f0ffffde;
-        font-size: 12pt;
-        box-shadow: 0px 10px 40px #00000056;
+        background: #fff;
+        color: black;
+        font-size: 12px;
+        box-shadow: 0px 5px 10px grey;
         outline: none;
         box-sizing: border-box;
         &::placeholder {
-            color: #f0ffff94;
-            font-weight: 600;
+            color: gray;
+            font-size: 10px;
+            font-weight: 800;
+            font-family: "Poppins", sans-serif;
         }
     }
     label {
-        color: #D1DCDF;
+        color: #fff;
         margin-bottom: 10px;
+        font-weight: 800;
     }
     p {
+        margin-bottom: 10px;
         font-size: 14px;
         line-height: 80%;
-        color: white;
-        font-weight: 10px;
+        color: black;
+        font-weight: 900;
+        text-decoration: underline;
     }
 `
 export const Link = styled(ReactLink)`

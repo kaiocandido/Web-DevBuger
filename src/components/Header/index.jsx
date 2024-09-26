@@ -1,5 +1,5 @@
 import { Container, HeaderLink, Navigation, Options, Profile, Logout, ContainerLink, Content } from "./styles";
-import { UserCircleCheck, Basket } from "@phosphor-icons/react"
+import { UserCircleCheck, Basket, SignOut } from "@phosphor-icons/react"
 
 export function Header() {
     return (
@@ -10,22 +10,29 @@ export function Header() {
                         <HeaderLink>
                             Home
                         </HeaderLink>
+                        <hr />
                         <HeaderLink>
                             Cardápio
+                        </HeaderLink>
+                        <hr />
+                        <HeaderLink>
+                            Categorias
                         </HeaderLink>
                     </div>
                 </Navigation>
                 <Options>
                     <Profile>
                         <div>
-                            <UserCircleCheck color="#FF441F" size={24} />
+                            <UserCircleCheck color="#fff" size={24} />
                             <p> Olá, <span> Kaio </span></p>
-                            <Logout>Sair</Logout>
                         </div>
+                        <hr />
+                        <Logout><SignOut color="#fff" size={24} /></Logout>
                     </Profile>
                     <ContainerLink>
                         <HeaderLink>
-                            <Basket color="#FF441F" size={24} />
+                            <hr />
+                            <Basket color="#fff" size={24} />
                             Carrinho
                         </HeaderLink>
                     </ContainerLink>

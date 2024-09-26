@@ -54,7 +54,7 @@ export function Register() {
         <RightContainer>
             <MainDiv>
                 <Header>
-                    <img src={Logo} alt="Logo-DevBurguer" />
+                    <h1>NEWS BURGUER</h1>
                 </Header>
                 <Form onSubmit={handleSubmit(onSubmit)}>
                     <h1>CADASTRO</h1>

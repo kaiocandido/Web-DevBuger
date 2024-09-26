@@ -19,6 +19,7 @@ These changes will help the layout better adjust to different screen sizes, impr
 */
 import styled from "styled-components";
 import { Link as ReactLink } from "react-router-dom";
+import { keyframes } from 'styled-components';
 
 export const RightContainer = styled.div`
     background-color: black;
@@ -58,39 +59,58 @@ export const MainDiv = styled.div`
         margin-bottom: 50px; 
     }
 `
+const pulse = keyframes`
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+`
 export const Header = styled.header`
-    img {
-        height: auto;
-        max-height: 300px;
-        width: 100%; 
-    }
+        h1{
+            font-weight: bold;
+            text-shadow: 2px 2px 0px #4A6E2A; 
+            font-size: 100px; 
+            color: #fff;
+            margin-bottom: 100px;
+            font-family: "Road Rage", sans-serif;
+            animation: ${pulse} 1.5s infinite;
+        }
 `
 export const Form = styled.form`
     width: 90%; 
     justify-content: center;
     flex-direction: column;
     padding: 30px 35px;
-    background: #2f2841;
+    background: #4A6E2A;
     border-radius: 20px;
-    box-shadow: 0px 10px 40px #00000056;
+    box-shadow: 0px 5px 10px grey;
     @media (max-width: 768px) {
         padding: 20px; 
     }
     p {
+        margin-top: 30px;
         color: white;
         font-size: 18px;
         text-align: center;
         a {
-            color: #FF441F;
+            color: black;
             text-decoration: underline;
             cursor: pointer;
         }
     }
     h1 {
-        color: #FF441F;
+        font-family: "Road Rage", sans-serif;
+        font-size: 50px;
+        color: #fff;
         font-weight: 800;
         margin: 0;
         text-align: center;
+        animation: ${pulse} 1.5s infinite;
+        text-shadow: 2px 2px 0px black;
     }
 `
 export const InputContainer = styled.div`
@@ -105,26 +125,31 @@ export const InputContainer = styled.div`
         border: none;
         border-radius: 10px;
         padding: 15px;
-        background: #514869;
-        color: #f0ffffde;
-        font-size: 12pt;
-        box-shadow: 0px 10px 40px #00000056;
+        background: #fff;
+        color: black;
+        font-size: 12px;
+        box-shadow: 0px 5px 10px grey;
         outline: none;
         box-sizing: border-box;
         &::placeholder {
-            color: #f0ffff94;
-            font-weight: 600;
+            color: gray;
+            font-size: 10px;
+            font-weight: 800;
+            font-family: "Poppins", sans-serif;
         }
     }
     label {
-        color: #D1DCDF;
+        color: #fff;
         margin-bottom: 10px;
+        font-weight: 800;
     }
     p {
+        margin-bottom: 10px;
         font-size: 14px;
         line-height: 80%;
-        color: white;
-        font-weight: 10px;
+        color: black;
+        font-weight: 900;
+        text-decoration: underline;
     }
 `
 export const Link = styled(ReactLink)`
