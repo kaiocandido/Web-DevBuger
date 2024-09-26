@@ -32,7 +32,7 @@ export const Navigation = styled.nav`
 
         hr{
             height: 24px;
-            border: 1px solid #4A6E2A;
+            border: 1px solid gray;
         }
     }
 `
@@ -40,14 +40,14 @@ export const HeaderLink = styled(Link)`
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #fff;
+    color: ${(props) => props.$isActive ? '#4A6E2A' : "#fff"};
     text-decoration: none;
     font-size: 14px;
     transition: color 200ms;
     cursor: pointer;
     hr{
             height: 24px;
-            border: 1px solid #4A6E2A;
+            border: 1px solid gray;
         }
     &:hover{
         color: #FF441F;
@@ -68,7 +68,7 @@ export const Profile = styled.div`
 
     hr{
         height: 24px;
-        border: 1px solid #4A6E2A;
+        border: 1px solid gray;
     }
     p{
         color: white;

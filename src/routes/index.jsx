@@ -4,6 +4,7 @@ import { Register } from "../containers/Register"
 import { Home } from "../containers/Home"
 import { Menu } from "../containers/Menu"
 import { Header } from "../components/Header"
+import { About } from "../containers/About"
 export const router = createBrowserRouter([
     {
         path: '/login',
@@ -24,6 +25,17 @@ export const router = createBrowserRouter([
     },
     {
         path: '/cardapio',
-        element: <Menu />,
+        element: <>
+            <Header />
+            <Menu />,
+        </>
     },
+    {
+        path: '/sobre',
+        element: <>
+            <Header />
+            <About />,
+        </>
+    },
+
 ])

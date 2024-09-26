@@ -9,6 +9,7 @@ export const Container = styled.div`
     background-color: #f0f0f0;
     background: black;
 `
+
 export const Banner = styled.div`
     background: url("${HamburguerBanner}") no-repeat;
     display: flex;
@@ -37,6 +38,7 @@ export const Banner = styled.div`
         display: block;
     }
 `
+
 export const CategoriesMenu = styled.div`
     display: flex;
     justify-content: center;
@@ -62,6 +64,7 @@ const pulse = keyframes`
     opacity: 0.7;
   }
 `
+
 export const CategoryButton = styled(Link)`
     animation: ${pulse} 5s infinite;
     font-family: "Poppins", sans-serif;

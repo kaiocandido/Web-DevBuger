@@ -1,25 +1,25 @@
 import { Container, HeaderLink, Navigation, Options, Profile, Logout, ContainerLink, Content } from "./styles";
 import { UserCircleCheck, Basket, SignOut } from "@phosphor-icons/react"
+import { useNavigate, useResolvedPath } from "react-router-dom";
 
 export function Header() {
+    const navigate = useNavigate()
+    const { pathname } = useResolvedPath()
+
     return (
         <Container>
             <Content>
                 <Navigation>
                     <div>
-                        <HeaderLink>
+                        <HeaderLink to={"/"} $isActive={pathname === '/'}>
                             Home
                         </HeaderLink>
                         <hr />
-                        <HeaderLink>
+                        <HeaderLink to={"/cardapio"} $isActive={pathname === '/cardapio'}>
                             Cardápio
                         </HeaderLink>
                         <hr />
-                        <HeaderLink>
-                            Categorias
-                        </HeaderLink>
-                        <hr />
-                        <HeaderLink>
+                        <HeaderLink to={"/sobre"} $isActive={pathname === '/sobre'}>
                             Sobre
                         </HeaderLink>
                     </div>
