@@ -18,6 +18,10 @@ export function Header() {
                         <HeaderLink>
                             Categorias
                         </HeaderLink>
+                        <hr />
+                        <HeaderLink>
+                            Sobre
+                        </HeaderLink>
                     </div>
                 </Navigation>
                 <Options>
