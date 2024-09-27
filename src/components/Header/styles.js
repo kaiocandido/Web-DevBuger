@@ -41,6 +41,7 @@ export const HeaderLink = styled(Link)`
     align-items: center;
     gap: 10px;
     color: ${(props) => props.$isActive ? '#4A6E2A' : "#fff"};
+    border-bottom: 1px solid #4A6E2A;
     text-decoration: none;
     font-size: 14px;
     transition: color 200ms;
@@ -50,8 +51,24 @@ export const HeaderLink = styled(Link)`
             border: 1px solid gray;
         }
     &:hover{
-        color: #FF441F;
+        color: red;
     }
+`
+export const HeaderLinkCar = styled(Link)`
+     display: flex;
+    align-items: center;
+    gap: 10px;
+    color: ${(props) => props.$isActive ? '#4A6E2A' : "#fff"};
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 200ms;
+    cursor: pointer;
+    hr{
+            height: 24px;
+            border: 1px solid gray;
+        }
+    &:hover{
+        color: red;
 `
 export const Options = styled.div`
     display: flex;

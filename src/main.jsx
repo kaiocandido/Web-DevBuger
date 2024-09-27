@@ -10,8 +10,8 @@ import GlobalStyles from "./styles/GlobalStyles"
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AppProvider>
-      <RouterProvider router={router} />
       <GlobalStyles />
+      <RouterProvider router={router} />
       <ToastContainer autoClose={2000} theme='colored' />
     </AppProvider>
   </StrictMode>,

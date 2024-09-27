@@ -1,10 +1,16 @@
-import { Container, HeaderLink, Navigation, Options, Profile, Logout, ContainerLink, Content } from "./styles";
+import { Container, HeaderLink, Navigation, Options, Profile, Logout, ContainerLink, Content, HeaderLinkCar } from "./styles";
 import { UserCircleCheck, Basket, SignOut } from "@phosphor-icons/react"
 import { useNavigate, useResolvedPath } from "react-router-dom";
+import { useUser } from "../../hooks/UserContext.jsx";
 
 export function Header() {
     const navigate = useNavigate()
     const { pathname } = useResolvedPath()
+    const { logout, userInfo } = useUser()
+    function logoutUser() {
+        logout()
+        navigate("/login")
+    }
 
     return (
         <Container>
@@ -28,17 +34,17 @@ export function Header() {
                     <Profile>
                         <div>
                             <UserCircleCheck color="#fff" size={24} />
-                            <p> Olá, <span> Kaio </span></p>
+                            <p> Olá, <span> {userInfo.name} </span></p>
                         </div>
                         <hr />
-                        <Logout><SignOut color="#fff" size={24} /></Logout>
+                        <Logout onClick={logoutUser}><SignOut color="#fff" size={24} /></Logout>
                     </Profile>
                     <ContainerLink>
-                        <HeaderLink>
+                        <HeaderLinkCar to={"/carrinho"}>
                             <hr />
-                            <Basket color="#fff" size={24} />
+                            <Basket to={"/carrinho"} color="#fff" size={24} />
                             Carrinho
-                        </HeaderLink>
+                        </HeaderLinkCar>
                     </ContainerLink>
                 </Options>
             </Content>

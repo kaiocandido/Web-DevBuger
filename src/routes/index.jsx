@@ -5,6 +5,8 @@ import { Home } from "../containers/Home"
 import { Menu } from "../containers/Menu"
 import { Header } from "../components/Header"
 import { About } from "../containers/About"
+import { Footer } from "../components/Footer"
+
 export const router = createBrowserRouter([
     {
         path: '/login',
@@ -18,16 +20,18 @@ export const router = createBrowserRouter([
         path: '/',
         element: (
             <>
-                <Header />
-                <Home />
+                <Header />,
+                <Home />,
+                <Footer />,
             </>
         ),
     },
     {
         path: '/cardapio',
         element: <>
-            <Header />
+            <Header />,
             <Menu />,
+            <Footer />,
         </>
     },
     {
@@ -35,6 +39,7 @@ export const router = createBrowserRouter([
         element: <>
             <Header />
             <About />,
+            <Footer />,
         </>
     },
 

@@ -4,8 +4,6 @@ import { keyframes } from 'styled-components';
 
 export const Main = styled.main`
     background-color: black;
-    width: 100vw;
-    overflow: hidden; 
 `
 const pulse = keyframes`
   0%, 100% {
@@ -46,14 +44,14 @@ export const Container = styled.section`
     background: black;
     background-size: cover;
     background-position: center;
-    padding: 20px;
-    margin-top: 50px;
+    //padding: 20px;
+    margin-top: 14px;
     @media (max-width: 768px) {
         height: auto;
     }
 `
 export const Content = styled.div`
-    padding-bottom: 70px;
+    //padding-bottom: 70px;
     @media (max-width: 768px) {
         padding-bottom: 30px; 
     }
