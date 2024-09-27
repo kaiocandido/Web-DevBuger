@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-
 export const Container = styled.div`
-    background-color: black;
+    background-color: #2e162c;
     width: 99vw;
     height: 45px;
     font-family: "Poppins", sans-serif;
@@ -22,6 +21,7 @@ export const Navigation = styled.nav`
     align-items: center;
     justify-content: center;
     height: 72px;
+    margin-top: 10px;
     div{
         margin-left: 56px;
         display: flex;
@@ -29,10 +29,9 @@ export const Navigation = styled.nav`
         justify-content: center;
         gap: 20px;
         margin-bottom: 30px;
-
         hr{
             height: 24px;
-            border: 1px solid gray;
+            border: 1px solid #fff;
         }
     }
 `
@@ -40,15 +39,15 @@ export const HeaderLink = styled(Link)`
     display: flex;
     align-items: center;
     gap: 10px;
-    color: ${(props) => props.$isActive ? '#4A6E2A' : "#fff"};
-    border-bottom: 1px solid #4A6E2A;
+    color: ${(props) => props.$isActive ? 'yellow' : "#fff"};
+    border-bottom: 1px solid #fff;
     text-decoration: none;
     font-size: 14px;
     transition: color 200ms;
     cursor: pointer;
     hr{
             height: 24px;
-            border: 1px solid gray;
+            border: 1px solid #fff;
         }
     &:hover{
         color: red;
@@ -65,7 +64,7 @@ export const HeaderLinkCar = styled(Link)`
     cursor: pointer;
     hr{
             height: 24px;
-            border: 1px solid gray;
+            border: 1px solid #fff;
         }
     &:hover{
         color: red;
@@ -82,10 +81,9 @@ export const Profile = styled.div`
     gap: 12px;
     font-size: 12px;
     margin-bottom: 25px;
-
     hr{
         height: 24px;
-        border: 1px solid gray;
+        border: 1px solid #fff;
     }
     p{
         color: white;
@@ -93,10 +91,9 @@ export const Profile = styled.div`
         word-spacing: 5px;
     }
     span{
-        color: #4A6E2A;
+        color: #fff;
         font-weight: 700;
     }
-
     div{
 
         display: flex;

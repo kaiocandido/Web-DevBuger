@@ -4,7 +4,6 @@ export const Container = styled.div`
     .product-item{
         padding-right: 40px;
     }
-    
     height: 280px;
     padding-right: 40px;
     padding-left: 40px;

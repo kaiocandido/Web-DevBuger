@@ -38,7 +38,6 @@ export const Container = styled.div`
         text-align: center;
     }
 `
-
 export const CardImg = styled.img`
     height: 100px;
     position: absolute;

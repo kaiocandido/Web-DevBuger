@@ -1,7 +1,7 @@
 import imageAbout from "../../assets/pexels-paul-voie-2523376.jpg"
 import imageAboutTwo from "../../assets/pexels-allanfranca-3465604.jpg"
 import imageAboutThree from "../../assets/pexels-fotios-photos-1024359.jpg"
-import imageAboutFour from "../../assets/hamburger-4955630_1920.png"
+import imageAboutFour from "../../assets/view-tasty-burger-with-cheese-meat.jpg"
 import { Container, ContainerImg, ContainerMedium, ContainerAbout, ContainerAboutTwo, ContainerAboutThree, ContainerAboutText, ContainerMap } from "./styles"
 import MapEmbed from "../../components/Maps"
 
@@ -38,7 +38,6 @@ export function About() {
                     <MapEmbed />
                 </ContainerMap>
             </ContainerMedium>
-
         </Container>
     )
 }

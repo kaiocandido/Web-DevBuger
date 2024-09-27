@@ -7,11 +7,10 @@ export const Container = styled.div`
     font-family: "Poppins", sans-serif;
     margin-top: 113px;
     height: 40px;
-    background-color: #4a6e2a;
+    background-color: #fff;
     width: 100%;
-
     p{  
-        color: white;
+        color: #2e162c;
         font-weight: 200;
         font-size: 12px;
     }

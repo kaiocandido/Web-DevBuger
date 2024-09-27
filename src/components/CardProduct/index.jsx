@@ -13,7 +13,6 @@ export function CardProduct({ product }) {
         </Container>
     )
 }
-
 CardProduct.propTypes = {
     product: PropTypes.object,
 }

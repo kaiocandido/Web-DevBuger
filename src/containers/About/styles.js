@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    background-color: black;
+    background-color: #2e162c;
 `
 export const ContainerMedium = styled.div`
     div{

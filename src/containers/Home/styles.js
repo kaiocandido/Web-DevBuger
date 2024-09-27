@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import BackgroundImg from "../../assets/view-delicious-fantasy-surreal-street-food.jpg";
+import BackgroundImg from "../../assets/delicioso-hamburguer-dentro-de-casa.jpg";
 import { keyframes } from 'styled-components';
 
 export const Main = styled.main`
-    background-color: black;
+    background-color: #2e162c;
+    height: 100%;
 `
 const pulse = keyframes`
   0%, 100% {
@@ -21,7 +22,6 @@ export const Banner = styled.div`
     background-size: cover;
     background-position: center;
     height: 300px;
-    border-radius: 10px;
     position: relative; 
     h1 {
         font-family: "Road Rage", sans-serif;
@@ -41,7 +41,7 @@ export const Banner = styled.div`
     }
 `
 export const Container = styled.section`
-    background: black;
+    background: #2e162c;
     background-size: cover;
     background-position: center;
     //padding: 20px;
@@ -51,7 +51,7 @@ export const Container = styled.section`
     }
 `
 export const Content = styled.div`
-    //padding-bottom: 70px;
+    //sspadding-bottom: 70px;
     @media (max-width: 768px) {
         padding-bottom: 30px; 
     }

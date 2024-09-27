@@ -2,13 +2,11 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
-
     .carousel-item{
         padding-right: 40px;
     }
     cursor: grab;
 `
-
 export const Title = styled.h2`
     font-size: 80px;
     color: #ffffff;
@@ -25,7 +23,7 @@ export const Title = styled.h2`
         bottom: 0;
         width: 56px;
         height: 4px;
-        background-color: #4A6E2A;
+        background-color: #fff;
         left: calc(50% - 28px);
     }
 `

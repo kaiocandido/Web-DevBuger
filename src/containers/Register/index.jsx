@@ -1,5 +1,4 @@
-import { InputContainer, Link, RightContainer, Title, Form, MainDiv, Header } from "./styles"
-import Logo from "../../assets/logo-burguer.png"
+import { InputContainer, Link, RightContainer, Form, MainDiv, Header } from "./styles"
 import { Button } from "../../components/Button"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"

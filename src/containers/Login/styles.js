@@ -20,9 +20,10 @@ These changes will help the layout better adjust to different screen sizes, impr
 import styled from "styled-components";
 import { Link as ReactLink } from "react-router-dom";
 import { keyframes } from 'styled-components';
+import BackgroundImage from "../../assets/delicioso-hamburguer-dentro-de-casa.jpg"
 
 export const RightContainer = styled.div`
-    background-color: black;
+    background: url('${BackgroundImage}');
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,16 +36,6 @@ export const RightContainer = styled.div`
         padding: 20px;
     }
 `
-export const Title = styled.h2`
-    font-size: 3rem; 
-    justify-content: center;
-    color: #FF441F;
-    font-weight: 1000;
-
-    @media (max-width: 768px) {
-        font-size: 2rem; 
-    }
-`
 export const MainDiv = styled.div`
     width: 50vh;
     height: auto; 
@@ -53,7 +44,6 @@ export const MainDiv = styled.div`
     align-items: center;
     margin-bottom: 100px;
     flex-direction: column;
-
     @media (max-width: 768px) {
         width: 90%; 
         margin-bottom: 50px; 
@@ -72,9 +62,9 @@ const pulse = keyframes`
 export const Header = styled.header`
         h1{
             font-weight: bold;
-            text-shadow: 2px 2px 0px #4A6E2A; 
+            text-shadow: 2px 2px 0px #fff; 
             font-size: 100px; 
-            color: #fff;
+            color: #2E162C;
             margin-bottom: 100px;
             font-family: "Road Rage", sans-serif;
             animation: ${pulse} 1.5s infinite;
@@ -85,9 +75,9 @@ export const Form = styled.form`
     justify-content: center;
     flex-direction: column;
     padding: 30px 35px;
-    background: #4A6E2A;
+    background: linear-gradient(135deg, #2E162C 30%, grey 70%, #2E162C 30%);
     border-radius: 20px;
-    box-shadow: 0px 5px 10px grey;
+    box-shadow: 0px 5px 10px white;
     @media (max-width: 768px) {
         padding: 20px; 
     }
@@ -97,7 +87,7 @@ export const Form = styled.form`
         font-size: 18px;
         text-align: center;
         a {
-            color: black;
+            color: yellow;
             text-decoration: underline;
             cursor: pointer;
         }
@@ -105,11 +95,11 @@ export const Form = styled.form`
     h1 {
         font-family: "Road Rage", sans-serif;
         font-size: 50px;
+        text-shadow: 2px 2px 0px green; 
         color: #fff;
         font-weight: 800;
         margin: 0;
         text-align: center;
-        animation: ${pulse} 1.5s infinite;
         text-shadow: 2px 2px 0px black;
     }
 `
@@ -147,9 +137,9 @@ export const InputContainer = styled.div`
         margin-bottom: 10px;
         font-size: 14px;
         line-height: 80%;
-        color: black;
+        color: red;
         font-weight: 900;
-        text-decoration: underline;
+        text-decoration: none;
     }
 `
 export const Link = styled(ReactLink)`

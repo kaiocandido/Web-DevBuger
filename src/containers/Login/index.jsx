@@ -1,18 +1,16 @@
-import Logo from "../../assets/logo-burguer.png"
 import { Button } from "../../components/Button"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import { api } from "../../services/api"
 import { toast } from 'react-toastify'
-import { InputContainer, Link, RightContainer, Title, Form, MainDiv, Header } from "./styles"
+import { InputContainer, Link, RightContainer, Form, MainDiv, Header } from "./styles"
 import { useNavigate } from "react-router-dom"
 import { useUser } from "../../hooks/UserContext"
 
 export function Login() {
     const navigate = useNavigate()
     const { putUserData } = useUser()
-
     const schema = yup.object({
         email: yup.string().email("Digite um E-mail Válido").required("Digite um email"),
         password: yup.string().min(6, "A senha deve ter no minimo 6 caracteres").required("Digite Uma Senha"),
@@ -56,7 +54,7 @@ export function Login() {
                     <h1>LOGIN</h1>
                     <InputContainer>
                         <label>Email</label>
-                        <input type="email" {...register("email")} placeholder="Email" />
+                        <input type="email" {...register("email")} placeholder="Email" img='1'/>
                         <p>{errors?.email?.message}</p>
                     </InputContainer>
                     <InputContainer>

@@ -4,17 +4,16 @@ import { Link } from "react-router-dom";
 import { keyframes } from 'styled-components';
 
 export const Container = styled.div`
-    background: black;
+    background: #2e162c;
 `
 export const Banner = styled.div`
     background: url("${HamburguerBanner}") no-repeat;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     background-position: center;
-    height: 480px;
-    background-color: black;
     background-size: cover;
+    height: 480px;
     width: 100%;
     position: relative;
     h1{

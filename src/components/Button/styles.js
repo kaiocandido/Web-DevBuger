@@ -10,11 +10,11 @@ export const ContainerButton = styled.button`
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 3px;
-    color: #4A6E2A;
+    color: white;
     font-family: "Poppins", sans-serif;
     text-shadow: 1px 1px 0px black; 
-    background: #fff;
-    box-shadow: 0px 5px 10px  black;
+    background: #2E162C;
+    box-shadow: 0px 5px 10px  grey;
     &:hover{
         cursor: pointer;
     }
