@@ -34,7 +34,7 @@ export function Header() {
                     <Profile>
                         <div>
                             <UserCircleCheck color="#fff" size={24} />
-                            <p> Olá, <span> {userInfo.name} </span></p>
+                            <p> Olá, <span> {userInfo?.name || "Visitante"} </span></p>
                         </div>
                         <hr />
                         <Logout onClick={logoutUser}><SignOut color="#fff" size={24} /></Logout>
