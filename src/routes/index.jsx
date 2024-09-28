@@ -6,6 +6,7 @@ import { Menu } from "../containers/Menu"
 import { Header } from "../components/Header"
 import { About } from "../containers/About"
 import { Footer } from "../components/Footer"
+import { Cart } from "../containers/Cart"
 
 export const router = createBrowserRouter([
     {
@@ -41,6 +42,10 @@ export const router = createBrowserRouter([
             <About />,
             <Footer />,
         </>
+    },
+    {
+        path: '/carrinho',
+        element: <Cart />
     },
 
 ])
