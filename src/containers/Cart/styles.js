@@ -58,7 +58,11 @@ export const Title = styled.h1`
 `
 export const Content = styled.div`
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: 1fr 40%;
+=======
+    grid-template-columns: 1fr 20%;
+>>>>>>> 8cf4e43e08f05b0ed367f228491a1152e9339142
     background-color: #2E162C;
     width: 100%;
     max-width: 1280px;

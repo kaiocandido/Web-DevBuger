@@ -11,6 +11,7 @@ export function CardProduct({ product }) {
                 <p>{product.name}</p>
                 <strong>{product.currencyValeu}</strong>
             </div>
+<<<<<<< HEAD
             <CartButton
                 onClick={(e) => {
                     e.preventDefault(); // Previne o envio de formulário, se necessário
@@ -19,6 +20,9 @@ export function CardProduct({ product }) {
                 }}
             >
             </CartButton>
+=======
+            {<CartButton onClick={() => putProductInCart(product)}></CartButton>}
+>>>>>>> 8cf4e43e08f05b0ed367f228491a1152e9339142
         </Container>
     )
 }
