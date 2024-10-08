@@ -1,5 +1,5 @@
 import { Banner, Container, Content, Main } from "./styles"
-import { CategoriesCarousel } from "../../components/CategoriesCarousel"
+import { CategoriesCarousel } from "../../components"
 
 export function Home() {
     return (

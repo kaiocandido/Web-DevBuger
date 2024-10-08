@@ -103,7 +103,7 @@ export const Profile = styled.div`
 `
 export const Logout = styled.button`
     border: none;
-    background: black;
+    background: transparent;
     margin-right: -30px;
 `
 export const ContainerLink = styled.div`
