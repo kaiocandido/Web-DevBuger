@@ -45,7 +45,11 @@ export const router = createBrowserRouter([
     },
     {
         path: '/carrinho',
-        element: <Cart />
+        element: <>
+            <Header />,
+            <Cart />,
+            <Footer />,
+        </>
     },
 
 ])

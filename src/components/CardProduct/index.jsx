@@ -14,9 +14,9 @@ export function CardProduct({ product }) {
 
             <CartButton
                 onClick={(e) => {
-                    e.preventDefault(); // Previne o envio de formulário, se necessário
-                    putProductInCart(product);
-                    alert(`${product.name} adicionado ao carrinho!`); // Feedback ao usuário
+                    e.preventDefault()
+                    putProductInCart(product)
+                    alert(`${product.name} adicionado ao carrinho!`)
                 }}
             >
             </CartButton>

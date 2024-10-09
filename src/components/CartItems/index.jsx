@@ -4,7 +4,7 @@ import { ButtonGroup, EmptyCart, ProductImage } from "./styles"
 import { FormatPrice } from "../../Utils/FormatPrice"
 
 export function CartItems() {
-    const { cartProducts, inCreaseProduct, deCreaseProduct } = useCart()
+    const { cartProducts, increaseProducts, decreaseProducts } = useCart()
     return (
         <Table.Root>
             <Table.Header>
@@ -31,9 +31,9 @@ export function CartItems() {
                             </Table.Td>
                             <Table.Td>
                                 <ButtonGroup>
-                                    <button onClick={() => deCreaseProduct(product.id)}>-</button>
+                                    <button onClick={() => decreaseProducts(product.id)}>-</button>
                                     {product.quantity}
-                                    <button onClick={() => inCreaseProduct(product.id)}>+</button>
+                                    <button onClick={() => increaseProducts(product.id)}>+</button>
                                 </ButtonGroup>
 
                             </Table.Td>
