@@ -26,9 +26,30 @@ export function CartResume() {
             return {
                 id: product.id,
                 quantity: product.quantity,
+                price: product.price,
             };
         });
 
+        try {
+            const { data } = await api.post('/create-payment-intent', { products });
+            navigate('/checkout', {
+                state: data,
+            });
+            console.log(data);
+        } catch (err) {
+            toast.error("Erro, tente novamente", {
+                position: 'top-right',
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'light',
+            });
+        }
+
+        /*
         try {
             const { status } = await api.post("/orders",
                 { products },
@@ -49,7 +70,7 @@ export function CartResume() {
             }
         } catch (error) {
             toast.error("Falha no sistema! Tente novamente!");
-        }
+        }*/
     };
 
     return (
