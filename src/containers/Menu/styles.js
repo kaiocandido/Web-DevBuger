@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from "styled-components"
 import HamburguerBanner from "../../assets/pexels-valeria-boltneva-1639562 1.svg"
-import { Link } from "react-router-dom";
-import { keyframes } from 'styled-components';
+import { Link } from "react-router-dom"
+import { keyframes } from "styled-components"
 
 export const Container = styled.div`
     background: #2e162c;

@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import BackgroundImg from "../../assets/delicioso-hamburguer-dentro-de-casa.jpg";
-import { keyframes } from 'styled-components';
+import styled from "styled-components"
+import BackgroundImg from "../../assets/delicioso-hamburguer-dentro-de-casa.jpg"
+import { keyframes } from 'styled-components'
 
 export const Main = styled.main`
     background-color: #2e162c;

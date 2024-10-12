@@ -1,17 +1,17 @@
-import { Button } from "../Button";
+import { Button } from "../Button"
 import { Container } from "./styles"
-import { toast } from "react-toastify";
-import { useEffect, useState } from "react";
-import { useCart } from "../../hooks/CartContext";
+import { toast } from "react-toastify"
+import { useEffect, useState } from "react"
+import { useCart } from "../../hooks/CartContext"
 import { api } from "../../services/api"
-import { FormatPrice } from "../../Utils/FormatPrice";
-import { useNavigate } from "react-router-dom";
+import { FormatPrice } from "../../Utils/FormatPrice"
+import { useNavigate } from "react-router-dom"
 
 export function CartResume() {
     const navigate = useNavigate()
     const [finalPrice, setFinalPrice] = useState(0)
     const [deliveryTax] = useState(500)
-    const { cartProducts, clearCart } = useCart()
+    const { cartProducts } = useCart()
 
     useEffect(() => {
 
@@ -35,7 +35,6 @@ export function CartResume() {
             navigate('/checkout', {
                 state: data,
             });
-            console.log(data);
         } catch (err) {
             toast.error("Erro, tente novamente", {
                 position: 'top-right',

@@ -64,7 +64,6 @@ export const router = createBrowserRouter([
     {
         path: '/complete',
         element: <>
-            <Header />,
             <CompletePayment />,
             <Footer />,
         </>

@@ -17,14 +17,6 @@ export function Header() {
             <Content>
                 <Navigation>
                     <div>
-                        <HeaderLink to={"/login"} $isActive={pathname === '/'}>
-                            Login
-                        </HeaderLink>
-                        <hr />
-                        <HeaderLink to={"/cadastro"} $isActive={pathname === '/'}>
-                            Cadastro
-                        </HeaderLink>
-                        <hr />
                         <HeaderLink to={"/"} $isActive={pathname === '/'}>
                             Home
                         </HeaderLink>

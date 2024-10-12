@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 import {
     useStripe,
-} from "@stripe/react-stripe-js";
-import "../../components/Stripe/styles.css";
+} from "@stripe/react-stripe-js"
+import "../../components/Stripe/styles.css"
 
 const SuccessIcon =
     <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,36 +48,36 @@ const STATUS_CONTENT_MAP = {
         iconColor: "#DF1B41",
         icon: ErrorIcon,
     }
-};
+}
 
 export function CompletePayment() {
-    const stripe = useStripe();
+    const stripe = useStripe()
 
-    const [status, setStatus] = useState("default");
-    const [intentId, setIntentId] = useState(null);
+    const [status, setStatus] = useState("default")
+    const [intentId, setIntentId] = useState(null)
 
     useEffect(() => {
         if (!stripe) {
-            return;
+            return
         }
 
         const clientSecret = new URLSearchParams(window.location.search).get(
             "payment_intent_client_secret"
-        );
+        )
 
         if (!clientSecret) {
-            return;
+            return
         }
 
         stripe.retrievePaymentIntent(clientSecret).then(({ paymentIntent }) => {
             if (!paymentIntent) {
-                return;
+                return
             }
 
-            setStatus(paymentIntent.status);
-            setIntentId(paymentIntent.id);
-        });
-    }, [stripe]);
+            setStatus(paymentIntent.status)
+            setIntentId(paymentIntent.id)
+        })
+    }, [stripe])
 
     return (
         <div className="container">
@@ -109,5 +109,5 @@ export function CompletePayment() {
                 <a id="retry-button" href={STATUS_CONTENT_MAP[status].url}>{STATUS_CONTENT_MAP[status].buttonText}</a>
             </div>
         </div>
-    );
+    )
 }

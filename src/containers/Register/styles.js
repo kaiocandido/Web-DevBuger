@@ -36,9 +36,9 @@ Dynamic Height:
 I changed the MainDiv height to auto, allowing content to automatically adjust height, which is especially important on mobile devices.
 These changes will help the layout better adjust to different screen sizes, improving the user experience. If you need more details or have other parts of the code to review, just let me know!
 */
-import styled from "styled-components";
-import { Link as ReactLink } from "react-router-dom";
-import { keyframes } from 'styled-components';
+import styled from "styled-components"
+import { Link as ReactLink } from "react-router-dom"
+import { keyframes } from 'styled-components'
 import BackgroundImage from "../../assets/delicioso-hamburguer-dentro-de-casa.jpg"
 
 export const RightContainer = styled.div`

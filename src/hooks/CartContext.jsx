@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
-import React, { createContext, useContext, useState, useEffect } from 'react'
+import PropTypes from "prop-types"
+import React, { createContext, useContext, useState, useEffect } from "react"
 
 const CartContext = createContext({})
 
@@ -8,6 +8,10 @@ export const CartProvider = ({ children }) => {
 
     const updateLocalStorage = async products => {
         await localStorage.setItem('codeburger:cartInfo', JSON.stringify(products))
+    }
+
+    const clearCart = () => {
+        setCartProducts([]);
     }
 
     const putProductInCart = async product => {
@@ -25,7 +29,7 @@ export const CartProvider = ({ children }) => {
             newCartProducts = [...cartProducts, product]
             setCartProducts(newCartProducts)
         }
-        // setCartProducts(userInfo)
+
         await updateLocalStorage(newCartProducts)
     }
 
@@ -77,7 +81,8 @@ export const CartProvider = ({ children }) => {
                 putProductInCart,
                 cartProducts,
                 increaseProducts,
-                decreaseProducts
+                decreaseProducts,
+                clearCart,
             }}
         >
             {children}

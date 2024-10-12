@@ -9,13 +9,28 @@
   width: 100vw;
 }
 
+
 .container {
+  background-color: white;
+  width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 66.9vh;
-  margin: 30px;
+  margin-top: 50px;
+  margin-left: 600px;
+  border: 10px solid white;
+  border-radius: 10px;
+
+}
+
+.paymentTextFinal {
+  text-align: center;
+  font-size: 100px;
+  margin-top: 10px;
+  color: black;
+  font-family: "Road Rage", sans-serif;
 }
 
 
